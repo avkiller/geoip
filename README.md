@@ -27,8 +27,8 @@ This project releases various formats of GeoIP files automatically every Thursda
 
 本项目发布的所有 GeoIP 文件，请查看 [release 分支](https://github.com/avkiller/geoip/tree/release)。以下是部分格式 GeoIP 文件的下载地址：
 
-> 如果无法访问域名 `raw.githubusercontent.com`，可以使用第二个地址 `cdn.jsdelivr.net`。
-> 如果无法访问域名 `cdn.jsdelivr.net`，可以将其替换为 `fastly.jsdelivr.net`。
+> 如果无法访问域名 `raw.githubusercontent.com`，可以使用第二个地址 `testingcf.jsdelivr.net`。
+> 如果无法访问域名 `testingcf.jsdelivr.net`，可以将其替换为 `fastly.jsdelivr.net`。
 >
 > *.sha256sum 为校验文件。
 
@@ -40,34 +40,34 @@ This project releases various formats of GeoIP files automatically every Thursda
 
 - **geoip.dat**：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/geoip.dat](https://raw.githubusercontent.com/avkiller/geoip/release/geoip.dat)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/geoip.dat](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/geoip.dat)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/geoip.dat](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/geoip.dat)
 - **geoip.dat.sha256sum**：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/geoip.dat.sha256sum](https://raw.githubusercontent.com/avkiller/geoip/release/geoip.dat.sha256sum)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/geoip.dat.sha256sum](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/geoip.dat.sha256sum)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/geoip.dat.sha256sum](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/geoip.dat.sha256sum)
 - **geoip-only-cn-private.dat**（精简版 GeoIP，只包含 `geoip:cn` 和 `geoip:private`）：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/geoip-only-cn-private.dat](https://raw.githubusercontent.com/avkiller/geoip/release/geoip-only-cn-private.dat)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/geoip-only-cn-private.dat](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/geoip-only-cn-private.dat)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/geoip-only-cn-private.dat](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/geoip-only-cn-private.dat)
 - **geoip-only-cn-private.dat.sha256sum**：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/geoip-only-cn-private.dat.sha256sum](https://raw.githubusercontent.com/avkiller/geoip/release/geoip-only-cn-private.dat.sha256sum)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/geoip-only-cn-private.dat.sha256sum](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/geoip-only-cn-private.dat.sha256sum)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/geoip-only-cn-private.dat.sha256sum](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/geoip-only-cn-private.dat.sha256sum)
 - **geoip-asn.dat**（精简版 GeoIP，只包含上述新增类别）：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/geoip-asn.dat](https://raw.githubusercontent.com/avkiller/geoip/release/geoip-asn.dat)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/geoip-asn.dat](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/geoip-asn.dat)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/geoip-asn.dat](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/geoip-asn.dat)
 - **geoip-asn.dat.sha256sum**：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/geoip-asn.dat.sha256sum](https://raw.githubusercontent.com/avkiller/geoip/release/geoip-asn.dat.sha256sum)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/geoip-asn.dat.sha256sum](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/geoip-asn.dat.sha256sum)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/geoip-asn.dat.sha256sum](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/geoip-asn.dat.sha256sum)
 - **cn.dat**（精简版 GeoIP，只包含 `geoip:cn`）：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/cn.dat](https://raw.githubusercontent.com/avkiller/geoip/release/cn.dat)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/cn.dat](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/cn.dat)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/cn.dat](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/cn.dat)
 - **cn.dat.sha256sum**：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/cn.dat.sha256sum](https://raw.githubusercontent.com/avkiller/geoip/release/cn.dat.sha256sum)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/cn.dat.sha256sum](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/cn.dat.sha256sum)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/cn.dat.sha256sum](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/cn.dat.sha256sum)
 - **private.dat**（精简版 GeoIP，只包含 `geoip:private`）：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/private.dat](https://raw.githubusercontent.com/avkiller/geoip/release/private.dat)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/private.dat](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/private.dat)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/private.dat](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/private.dat)
 - **private.dat.sha256sum**：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/private.dat.sha256sum](https://raw.githubusercontent.com/avkiller/geoip/release/private.dat.sha256sum)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/private.dat.sha256sum](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/private.dat.sha256sum)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/private.dat.sha256sum](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/private.dat.sha256sum)
 - **所有国家 / 地区 / 新增类别**的 dat 格式文件，请查看本项目 `release` 分支下的 [dat 目录](https://github.com/avkiller/geoip/tree/release/dat)。
 
 #### dat 格式文件使用方法
@@ -115,7 +115,7 @@ This project releases various formats of GeoIP files automatically every Thursda
 ```yaml
 geodata-mode: true
 geox-url:
-  geoip: "https://cdn.jsdelivr.net/gh/avkiller/geoip@release/geoip.dat"
+  geoip: "https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/geoip.dat"
 ```
 </details>
 
@@ -160,10 +160,10 @@ MaxMind 官方版**国家/地区**类型 mmdb 文件：
 
 - **GeoLite2-Country.mmdb**：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/GeoLite2-Country.mmdb](https://raw.githubusercontent.com/avkiller/geoip/release/GeoLite2-Country.mmdb)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-Country.mmdb](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-Country.mmdb)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-Country.mmdb](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-Country.mmdb)
 - **GeoLite2-Country.mmdb.sha256sum**：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/GeoLite2-Country.mmdb.sha256sum](https://raw.githubusercontent.com/avkiller/geoip/release/GeoLite2-Country.mmdb.sha256sum)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-Country.mmdb.sha256sum](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-Country.mmdb.sha256sum)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-Country.mmdb.sha256sum](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-Country.mmdb.sha256sum)
 
 MaxMind 官方版 **ASN** 类型 mmdb 文件：
 
@@ -171,10 +171,10 @@ MaxMind 官方版 **ASN** 类型 mmdb 文件：
 
 - **GeoLite2-ASN.mmdb**：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/GeoLite2-ASN.mmdb](https://raw.githubusercontent.com/avkiller/geoip/release/GeoLite2-ASN.mmdb)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-ASN.mmdb](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-ASN.mmdb)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-ASN.mmdb](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-ASN.mmdb)
 - **GeoLite2-ASN.mmdb.sha256sum**：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/GeoLite2-ASN.mmdb.sha256sum](https://raw.githubusercontent.com/avkiller/geoip/release/GeoLite2-ASN.mmdb.sha256sum)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-ASN.mmdb.sha256sum](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-ASN.mmdb.sha256sum)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-ASN.mmdb.sha256sum](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-ASN.mmdb.sha256sum)
 
 本项目生成的**国家/地区**类型 mmdb 文件：
 
@@ -186,28 +186,28 @@ MaxMind 官方版 **ASN** 类型 mmdb 文件：
 
 - **Country-without-asn.mmdb**（传统版 GeoIP，只包含国家/地区类别，不包含上述新增类别。建议优先使用）：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/Country-without-asn.mmdb](https://raw.githubusercontent.com/avkiller/geoip/release/Country-without-asn.mmdb)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/Country-without-asn.mmdb](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/Country-without-asn.mmdb)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country-without-asn.mmdb](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country-without-asn.mmdb)
 - **Country-without-asn.mmdb.sha256sum**：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/Country-without-asn.mmdb.sha256sum](https://raw.githubusercontent.com/avkiller/geoip/release/Country-without-asn.mmdb.sha256sum)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/Country-without-asn.mmdb.sha256sum](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/Country-without-asn.mmdb.sha256sum)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country-without-asn.mmdb.sha256sum](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country-without-asn.mmdb.sha256sum)
 - **Country.mmdb**（增强版 GeoIP，包含国家/地区类别，以及上述新增类别。但由于 MaxMind mmdb 格式限制，部分国家/地区类别的 IP 地址数据不如上述 **Country-without-asn.mmdb** 准确）：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/Country.mmdb](https://raw.githubusercontent.com/avkiller/geoip/release/Country.mmdb)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/Country.mmdb](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/Country.mmdb)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country.mmdb](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country.mmdb)
 - **Country.mmdb.sha256sum**：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/Country.mmdb.sha256sum](https://raw.githubusercontent.com/avkiller/geoip/release/Country.mmdb.sha256sum)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/Country.mmdb.sha256sum](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/Country.mmdb.sha256sum)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country.mmdb.sha256sum](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country.mmdb.sha256sum)
 - **Country-only-cn-private.mmdb**（精简版 GeoIP，只包含 `GEOIP,CN` 和 `GEOIP,PRIVATE`）：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/Country-only-cn-private.mmdb](https://raw.githubusercontent.com/avkiller/geoip/release/Country-only-cn-private.mmdb)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/Country-only-cn-private.mmdb](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/Country-only-cn-private.mmdb)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country-only-cn-private.mmdb](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country-only-cn-private.mmdb)
 - **Country-only-cn-private.mmdb.sha256sum**：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/Country-only-cn-private.mmdb.sha256sum](https://raw.githubusercontent.com/avkiller/geoip/release/Country-only-cn-private.mmdb.sha256sum)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/Country-only-cn-private.mmdb.sha256sum](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/Country-only-cn-private.mmdb.sha256sum)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country-only-cn-private.mmdb.sha256sum](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country-only-cn-private.mmdb.sha256sum)
 - **Country-asn.mmdb**（精简版 GeoIP，只包含上述新增类别）：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/Country-asn.mmdb](https://raw.githubusercontent.com/avkiller/geoip/release/Country-asn.mmdb)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/Country-asn.mmdb](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/Country-asn.mmdb)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country-asn.mmdb](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country-asn.mmdb)
 - **Country-asn.mmdb.sha256sum**：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/Country-asn.mmdb.sha256sum](https://raw.githubusercontent.com/avkiller/geoip/release/Country-asn.mmdb.sha256sum)
-  - [https://cdn.jsdelivr.net/gh/avkiller/geoip@release/Country-asn.mmdb.sha256sum](https://cdn.jsdelivr.net/gh/avkiller/geoip@release/Country-asn.mmdb.sha256sum)
+  - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country-asn.mmdb.sha256sum](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country-asn.mmdb.sha256sum)
 
 #### mmdb 格式文件使用方法
 
@@ -230,8 +230,8 @@ rules:
 ```yaml
 geodata-mode: true
 geox-url:
-  mmdb: "https://cdn.jsdelivr.net/gh/avkiller/geoip@release/Country.mmdb"
-  asn: "https://cdn.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-ASN.mmdb"
+  mmdb: "https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country.mmdb"
+  asn: "https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-ASN.mmdb"
 ```
 </details>
 
@@ -304,13 +304,13 @@ GEOIP,CN,policy,no-resolve
       "tag": "geoip-cn",
       "type": "remote",
       "format": "binary",
-      "url": "https://cdn.jsdelivr.net/gh/avkiller/geoip@release/srs/cn.srs"
+      "url": "https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/srs/cn.srs"
     },
     {
       "tag": "geoip-us",
       "type": "remote",
       "format": "binary",
-      "url": "https://cdn.jsdelivr.net/gh/avkiller/geoip@release/srs/us.srs"
+      "url": "https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/srs/us.srs"
     }
   ]
 }
@@ -336,7 +336,7 @@ rule-providers:
     type: http
     behavior: ipcidr
     format: mrs
-    url: "https://cdn.jsdelivr.net/gh/avkiller/geoip@release/mrs/cn.mrs"
+    url: "https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/mrs/cn.mrs"
     path: ./mrs/geoip/cn.mrs
     interval: 86400
 
@@ -344,7 +344,7 @@ rule-providers:
     type: http
     behavior: ipcidr
     format: mrs
-    url: "https://cdn.jsdelivr.net/gh/avkiller/geoip@release/mrs/google.mrs"
+    url: "https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/mrs/google.mrs"
     path: ./mrs/geoip/google.mrs
     interval: 86400
 
@@ -373,7 +373,7 @@ rule-providers:
     type: http
     behavior: ipcidr
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/avkiller/geoip@release/clash/ipcidr/cn.txt"
+    url: "https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/clash/ipcidr/cn.txt"
     path: ./ruleset/ipcidr/cn.yaml
     interval: 86400
 
@@ -381,7 +381,7 @@ rule-providers:
     type: http
     behavior: ipcidr
     format: yaml
-    url: "https://cdn.jsdelivr.net/gh/avkiller/geoip@release/clash/ipcidr/telegram.txt"
+    url: "https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/clash/ipcidr/telegram.txt"
     path: ./ruleset/ipcidr/telegram.yaml
     interval: 86400
 
@@ -406,9 +406,9 @@ rules:
 
 ```conf
 [Rule]
-RULE-SET,https://cdn.jsdelivr.net/gh/avkiller/geoip@release/surge/us.txt,REJECT
-RULE-SET,https://cdn.jsdelivr.net/gh/avkiller/geoip@release/surge/cn.txt,DIRECT
-RULE-SET,https://cdn.jsdelivr.net/gh/avkiller/geoip@release/surge/telegram.txt,PROXY,no-resolve
+RULE-SET,https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/surge/us.txt,REJECT
+RULE-SET,https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/surge/cn.txt,DIRECT
+RULE-SET,https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/surge/telegram.txt,PROXY,no-resolve
 ```
 </details>
 
