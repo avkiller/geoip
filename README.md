@@ -228,7 +228,7 @@ rules:
   <summary>点击查看在 <b>mihomo</b> 中的使用方法</summary>
 
 ```yaml
-geodata-mode: true
+geodata-mode: false
 geox-url:
   mmdb: "https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country.mmdb"
   asn: "https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-ASN.mmdb"
