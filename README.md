@@ -1,5 +1,9 @@
 <h1 align="center">GeoIP 增强版：自由定制多种格式 GeoIP 文件</h1>
 
+<p align="center">
+  <img src="./assets/hero.png" alt="GeoIP project hero image">
+</p>
+
 <div align="center">
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Loyalsoldier/geoip) [![jsdelivr stats](https://data.jsdelivr.com/v1/package/gh/Loyalsoldier/geoip/badge?style=rounded)](https://www.jsdelivr.com/package/gh/Loyalsoldier/geoip) ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Loyalsoldier/geoip/total?logo=github) ![GitHub Downloads (all assets, latest release)](https://img.shields.io/github/downloads/Loyalsoldier/geoip/latest/total?logo=github)
@@ -12,9 +16,9 @@
 
 本项目每周四自动生成多种格式 GeoIP 文件，同时提供命令行界面（CLI）工具供用户自行定制 GeoIP 文件，包括但不限于 V2Ray `dat` 格式文件 `geoip.dat`、MaxMind `mmdb` 格式文件 `Country.mmdb`、sing-box `SRS` 格式文件、mihomo `MRS` 格式文件、Clash ruleset 和 Surge ruleset。
 
-This project releases various formats of GeoIP files automatically every Thursday, and provides a command line interface(CLI) tool for users to customize their own GeoIP files, including but not limited to V2Ray `dat` format file `geoip.dat`, MaxMind `mmdb` format file `Country.mmdb`, sing-box `SRS` format files, mihomo `MRS` format files, Clash ruleset files and Surge ruleset files.
+This project releases various formats of GeoIP files automatically every Thursday, and provides a command line interface (CLI) tool for users to customize their own GeoIP files, including but not limited to V2Ray `dat` format file `geoip.dat`, MaxMind `mmdb` format file `Country.mmdb`(GeoIP2-Country.mmdb, GeoLite2-Country.mmdb), sing-box `SRS` format file, mihomo `MRS` format file, Clash ruleset file, Surge ruleset file, Nginx allow list and Nginx deny list.
 
-## 与 MaxMind 官方 GeoIP 数据的区别
+## GeoIP 类别
 
 本项目默认使用 [MaxMind GeoLite2 Country CSV 数据](https://github.com/avkiller/geoip/blob/release/GeoLite2-Country-CSV.zip)生成各个国家和地区的 GeoIP 文件。所有可供使用的国家和地区 geoip 类别（如 `geoip:cn`，两位英文字母表示国家和地区），请查看：[https://www.iban.com/country-codes](https://www.iban.com/country-codes)。
 
@@ -80,7 +84,7 @@ This project releases various formats of GeoIP files automatically every Thursda
   - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/private.dat.sha256sum](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/private.dat.sha256sum)
 - **所有国家 / 地区 / 新增类别**的 dat 格式文件，请查看本项目 `release` 分支下的 [dat 目录](https://github.com/avkiller/geoip/tree/release/dat)。
 
-#### dat 格式文件使用方法
+### V2Ray dat 使用方法
 
 <details>
   <summary>点击查看在 <b>V2Ray</b> 和 <b>Xray-core</b> 中的使用方法</summary>
@@ -117,6 +121,7 @@ This project releases various formats of GeoIP files automatically every Thursda
   ]
 }
 ```
+
 </details>
 
 <details>
@@ -127,6 +132,7 @@ geodata-mode: true
 geox-url:
   geoip: "https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/geoip.dat"
 ```
+
 </details>
 
 <details>
@@ -139,6 +145,7 @@ direct(geoip:cn)
 proxy(geoip:telegram)
 proxy(geoip:us)
 ```
+
 </details>
 
 <details>
@@ -156,6 +163,7 @@ proxy(geoip:us)
   "geoip": "./geoip.dat"
 }
 ```
+
 </details>
 
 ---
@@ -219,7 +227,9 @@ MaxMind 官方版 **ASN** 类型 mmdb 文件：
   - [https://raw.githubusercontent.com/avkiller/geoip/release/Country-asn.mmdb.sha256sum](https://raw.githubusercontent.com/avkiller/geoip/release/Country-asn.mmdb.sha256sum)
   - [https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country-asn.mmdb.sha256sum](https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country-asn.mmdb.sha256sum)
 
-#### mmdb 格式文件使用方法
+---
+
+### MaxMind mmdb 使用方法
 
 <details>
   <summary>点击查看在 <b>Clash</b> 中的使用方法</summary>
@@ -232,6 +242,7 @@ rules:
   - GEOIP,FACEBOOK,policy
   - GEOIP,CN,policy,no-resolve
 ```
+
 </details>
 
 <details>
@@ -243,6 +254,7 @@ geox-url:
   mmdb: "https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/Country.mmdb"
   asn: "https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/GeoLite2-ASN.mmdb"
 ```
+
 </details>
 
 <details>
@@ -256,6 +268,7 @@ GEOIP,PRIVATE,DIRECT
 GEOIP,FACEBOOK,PROXY
 GEOIP,CN,DIRECT
 ```
+
 </details>
 
 <details>
@@ -269,6 +282,7 @@ GEOIP,PRIVATE,DIRECT
 GEOIP,FACEBOOK,PROXY
 GEOIP,CN,DIRECT
 ```
+
 </details>
 
 <details>
@@ -282,6 +296,7 @@ GEOIP,PRIVATE,policy,no-resolve
 GEOIP,FACEBOOK,policy
 GEOIP,CN,policy,no-resolve
 ```
+
 </details>
 
 ---
@@ -292,7 +307,7 @@ GEOIP,CN,policy,no-resolve
 
 请查看本项目 `release` 分支下的 [srs 目录](https://github.com/avkiller/geoip/tree/release/srs)。
 
-#### SRS 格式文件使用方法
+### sing-box SRS 使用方法
 
 <details>
   <summary>点击查看在 <b>sing-box</b> 中的使用方法</summary>
@@ -325,6 +340,7 @@ GEOIP,CN,policy,no-resolve
   ]
 }
 ```
+
 </details>
 
 ---
@@ -335,7 +351,7 @@ GEOIP,CN,policy,no-resolve
 
 请查看本项目 `release` 分支下的 [mrs 目录](https://github.com/avkiller/geoip/tree/release/mrs)。
 
-#### MRS 格式文件使用方法
+### mihomo MRS 使用方法
 
 <details>
   <summary>点击查看在 <b>mihomo</b> 中的使用方法</summary>
@@ -362,6 +378,7 @@ rules:
   - RULE-SET,cn-cidr,DIRECT
   - RULE-SET,google-cidr,PROXY,no-resolve
 ```
+
 </details>
 
 ---
@@ -399,13 +416,14 @@ rules:
   - RULE-SET,cn-cidr,DIRECT
   - RULE-SET,telegram-cidr,PROXY,no-resolve
 ```
+
 </details>
 
 ---
 
-### Surge ruleset 文件
+### Clash ruleset 下载地址
 
-> 适用于 [Surge](https://nssurge.com)。
+> 适用于 [Clash Premium](https://github.com/Dreamacro/clash)、[mihomo](https://github.com/MetaCubeX/mihomo/tree/Meta)。
 
 请查看本项目 `release` 分支下的 [surge 目录](https://github.com/avkiller/geoip/tree/release/surge)。
 
@@ -420,6 +438,7 @@ RULE-SET,https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/surge/us.txt,R
 RULE-SET,https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/surge/cn.txt,DIRECT
 RULE-SET,https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/surge/telegram.txt,PROXY,no-resolve
 ```
+
 </details>
 
 ---
@@ -430,22 +449,99 @@ RULE-SET,https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/surge/telegram
 
 ---
 
-### Nginx `allow` 和 `deny` 文件
+### Nginx `allow` 和 `deny` 格式文件
 
 请查看本项目 `release` 分支下的 [nginx 目录](https://github.com/avkiller/geoip/tree/release/nginx)。
 
 ---
 
+### 纯文本 txt 格式文件
+
+所有**国家/地区**、**新增类别**的纯文本 txt 格式文件，请查看本项目 `release` 分支下的 [text 目录](https://github.com/Loyalsoldier/geoip/tree/release/text)。
+
+部分**国家/地区**类别：
+
+- **中国大陆**（Mainland China）：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/cn.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/cn.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/cn.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/cn.txt)
+- **香港**（Hong Kong）：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/hk.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/hk.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/hk.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/hk.txt)
+- **澳门**（Macau）：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/mo.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/mo.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/mo.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/mo.txt)
+- **台湾**（Taiwan）：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/tw.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/tw.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/tw.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/tw.txt)
+- **美国**（America）：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/us.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/us.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/us.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/us.txt)
+- **日本**（Japan）：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/jp.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/jp.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/jp.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/jp.txt)
+- **韩国**（Korea）：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/kr.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/kr.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/kr.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/kr.txt)
+- **新加坡**（Singapore）：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/sg.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/sg.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/sg.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/sg.txt)
+- **缅甸**（Myanmar）：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/mm.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/mm.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/mm.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/mm.txt)
+- **伊朗**（Iran）：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/ir.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/ir.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/ir.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/ir.txt)
+- **俄罗斯**（Russia）：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/ru.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/ru.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/ru.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/ru.txt)
+- **白俄罗斯**（Belarus）：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/by.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/by.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/by.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/by.txt)
+- **土库曼斯坦**（Turkmenistan）：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/tm.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/tm.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/tm.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/tm.txt)
+
+**新增**类别：
+
+- **cloudflare**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/cloudflare.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/cloudflare.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/cloudflare.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/cloudflare.txt)
+- **cloudfront**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/cloudfront.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/cloudfront.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/cloudfront.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/cloudfront.txt)
+- **facebook**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/facebook.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/facebook.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/facebook.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/facebook.txt)
+- **fastly**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/fastly.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/fastly.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/fastly.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/fastly.txt)
+- **google**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/google.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/google.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/google.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/google.txt)
+- **netflix**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/netflix.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/netflix.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/netflix.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/netflix.txt)
+- **telegram**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/telegram.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/telegram.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/telegram.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/telegram.txt)
+- **twitter**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/twitter.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/twitter.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/twitter.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/twitter.txt)
+- **tor**：
+  - [https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/tor.txt](https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/tor.txt)
+  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/tor.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/text/tor.txt)
+
 ## 自行定制 GeoIP 文件
 
-可通过以下几种方式自行定制 GeoIP 文件：
+> [!NOTE]
+> 如果需要使用 MaxMind 官方 GeoLite2 数据文件，需要提前从 MaxMind 下载，或者从本项目 [release 分支](https://github.com/Loyalsoldier/geoip/tree/release)下载（文件名以 `GeoLite2` 为前缀的文件），并解压缩到名为 `geolite2` 的目录。
 
 - **在线生成**：[Fork](https://github.com/avkiller/geoip/fork) 本仓库后，修改自己仓库内的配置文件 `config.json` 和 GitHub Workflow `.github/workflows/build.yml`
 - **本地生成**：
   - 安装 [Golang](https://go.dev/dl/) 和 [Git](https://git-scm.com)
   - 拉取项目代码: `git clone https://github.com/avkiller/geoip.git`
   - 进入项目根目录：`cd geoip`
-  - 修改配置文件 `config.json`
+  - 根据 [`configuration.md`](https://github.com/Loyalsoldier/geoip/blob/HEAD/configuration.md) 配置说明文档，修改配置文件 `config.json`
   - 运行代码：`go run ./ convert -c ./config.json`
 
 **特别说明：**
@@ -457,7 +553,7 @@ RULE-SET,https://testingcf.jsdelivr.net/gh/avkiller/geoip@release/surge/telegram
 
 本项目有两个概念：`input` 和 `output`。`input` 指数据源（data source）及其输入格式，`output` 指数据的去向（data destination）及其输出格式。CLI 的作用就是通过读取配置文件中的选项，聚合用户提供的所有数据源，去重，将其转换为目标格式，并输出到文件。
 
-These two concepts are notable: `input` and `output`. The `input` is the data source and its input format, whereas the `output` is the destination of the converted data and its output format. What the CLI does is to aggregate all input format data, then convert them to output format and write them to GeoIP files by using the options in the config file.
+These two concepts in configuration file `config.json` are notable: `input` and `output`. The `input` is the data source and its input format, whereas the `output` is the destination of the converted data and its output format. What the CLI does is to aggregate all input format data, then convert them to output format and write them to GeoIP files by using the options in the config file.
 
 ### 支持的格式
 
@@ -478,8 +574,8 @@ These two concepts are notable: `input` and `output`. The `input` is the data so
 - **ipinfoCountryMMDB**：IPInfo country mmdb 数据格式（`country.mmdb`）
 - **mihomoMRS**：mihomo MRS 数据格式（`geoip-cn.mrs`）
 - **singboxSRS**：sing-box SRS 数据格式（`geoip-cn.srs`）
-- **clashRuleSetClassical**：[classical 类型的 Clash RuleSet](https://github.com/Dreamacro/clash/wiki/premium-core-features#classical)
-- **clashRuleSet**：[ipcidr 类型的 Clash RuleSet](https://github.com/Dreamacro/clash/wiki/premium-core-features#ipcidr)
+- **clashRuleSetClassical**：[classical 类型的 Clash RuleSet](https://wiki.metacubex.one/config/rule-providers/content/#classical)
+- **clashRuleSet**：[ipcidr 类型的 Clash RuleSet](https://wiki.metacubex.one/config/rule-providers/content/#ipcidr)
 - **surgeRuleSet**：[Surge RuleSet](https://manual.nssurge.com/rule/ruleset.html)
 
 支持的 `output` 输出格式：
@@ -493,8 +589,8 @@ These two concepts are notable: `input` and `output`. The `input` is the data so
 - **ipinfoCountryMMDB**：IPInfo country mmdb 数据格式（`country.mmdb`）
 - **mihomoMRS**：mihomo MRS 数据格式（`geoip-cn.mrs`）
 - **singboxSRS**：sing-box SRS 数据格式（`geoip-cn.srs`）
-- **clashRuleSetClassical**：[classical 类型的 Clash RuleSet](https://github.com/Dreamacro/clash/wiki/premium-core-features#classical)
-- **clashRuleSet**：[ipcidr 类型的 Clash RuleSet](https://github.com/Dreamacro/clash/wiki/premium-core-features#ipcidr)
+- **clashRuleSetClassical**：[classical 类型的 Clash RuleSet](https://wiki.metacubex.one/config/rule-providers/content/#classical)
+- **clashRuleSet**：[ipcidr 类型的 Clash RuleSet](https://wiki.metacubex.one/config/rule-providers/content/#ipcidr)
 - **surgeRuleSet**：[Surge RuleSet](https://manual.nssurge.com/rule/ruleset.html)
 
 ### 注意事项
