@@ -2,6 +2,7 @@ package special
 
 import (
 	"encoding/json"
+	"fmt"
 
 	"github.com/Loyalsoldier/geoip/lib"
 )
@@ -18,25 +19,37 @@ var testCIDRs = []string{
 
 func init() {
 	lib.RegisterInputConfigCreator(typeTest, func(action lib.Action, data json.RawMessage) (lib.InputConverter, error) {
-		return newTest(action, data)
+		return newTestFromBytes(action, data)
 	})
 	lib.RegisterInputConverter(typeTest, &test{
 		Description: descTest,
 	})
 }
 
-func newTest(action lib.Action, data json.RawMessage) (lib.InputConverter, error) {
-	return &test{
-		Type:        typeTest,
-		Action:      action,
-		Description: descTest,
-	}, nil
-}
-
 type test struct {
 	Type        string
 	Action      lib.Action
 	Description string
+}
+
+func newTest(action lib.Action, opts ...lib.InputOption) (lib.InputConverter, error) {
+	t := &test{
+		Type:        typeTest,
+		Action:      action,
+		Description: descTest,
+	}
+
+	for _, opt := range opts {
+		if opt != nil {
+			opt(t)
+		}
+	}
+
+	return t, nil
+}
+
+func newTestFromBytes(action lib.Action, data []byte) (lib.InputConverter, error) {
+	return newTest(action)
 }
 
 func (t *test) GetType() string {
@@ -55,21 +68,21 @@ func (t *test) Input(container lib.Container) (lib.Container, error) {
 	entry := lib.NewEntry(entryNameTest)
 	for _, cidr := range testCIDRs {
 		if err := entry.AddPrefix(cidr); err != nil {
-			return nil, err
+			return nil, fmt.Errorf("❌ [type %s | action %s] %w", t.Type, t.Action, err)
 		}
 	}
 
 	switch t.Action {
 	case lib.ActionAdd:
 		if err := container.Add(entry); err != nil {
-			return nil, err
+			return nil, fmt.Errorf("❌ [type %s | action %s] %w", t.Type, t.Action, err)
 		}
 	case lib.ActionRemove:
 		if err := container.Remove(entry, lib.CaseRemovePrefix); err != nil {
-			return nil, err
+			return nil, fmt.Errorf("❌ [type %s | action %s] %w", t.Type, t.Action, err)
 		}
 	default:
-		return nil, lib.ErrUnknownAction
+		return nil, fmt.Errorf("❌ [type %s | action %s] %w", t.Type, t.Action, lib.ErrUnknownAction)
 	}
 
 	return container, nil
